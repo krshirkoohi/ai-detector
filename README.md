@@ -12,11 +12,15 @@ pip install transformers torch scikit-learn numpy textstat joblib datasets
 
 ### Download the small backbone models
 
-`python ai_humaniser.py --download-models`
+```bash
+python ai_humaniser.py --download-models
+```
 
 ### Run interactively
 
-`python ai_humaniser.py`
+```bash
+python ai_humaniser.py
+```
 
 Paste a paragraph, hit ↵ twice, and you’ll get an AI-likelihood score plus a friendly verdict.
 
@@ -38,7 +42,9 @@ print("MAPE vs GPTZero:", mape)
 
 * Retrain with your own labelled data:
 
-`python ai_humaniser.py --retrain`
+```bash
+python ai_humaniser.py --retrain
+```
 
 The script automatically builds a new dataset (10 k human + 10 k AI paragraphs) and trains a logistic-regression classifier on the richer feature set in the code.
 * Add extra features or swap in a different classifier – the Detector and _FeatureExtractor classes are cleanly separated; modify _FeatureExtractor.extract() or switch to an XGBoost model for potentially higher accuracy.
