@@ -22,7 +22,7 @@ Paste a paragraph, hit ↵ twice, and you’ll get an AI-likelihood score plus a
 
 ### Benchmark against GPTZero
 
-If you have a CSV with columns text,gptzero_score, load it in a notebook:
+If you have a CSV with columns `text,gptzero_score`, load it in a notebook:
 
 ```python
 import pandas as pd
